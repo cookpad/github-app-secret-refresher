@@ -52,10 +52,7 @@ service may access the secret.
 
 ### Kubernetes Secret
 
-Periodically creates and updates a Kubernetes Secret within the Job's namespace with the following spec.
-
-* The **username** can be used to authenticate to a git repository on GitHub
-* The **password** field is the Installation Access Token for authenticating to git or GitHub apis. 
+Periodically creates and updates a Kubernetes Secret within the Job's namespace with a **token** field which contains an Installation Access Token for authenticating to git or GitHub API.
 
 ```text
 Name:         github-credentials
@@ -67,8 +64,7 @@ Type:  Opaque
 
 Data
 ====
-password:  56 bytes
-username:  20 bytes
+token:  56 bytes
 ```
 
 
